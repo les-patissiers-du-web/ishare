@@ -28,3 +28,16 @@ public/2506e40747c1e4fe1c8c42037083a6ac80d10e34
 /var/www/public/2506e40747c1e4fe1c8c42037083a6ac80d10e34
 Deleted
 ```
+
+## TODO
+
+- [ ] Convert into a Python executable module
+- [ ] Remove configuration from script to dotfiles in user $HOME
+- [ ] Support key authentication
+- [ ] Support HTTP POST for upload
+- [ ] Improve upload and url generation for filename with multiple . (ex: .tar.gz)
+- [ ] Add list command
+- [x] Add progression bar
+- [ ] Create a simple cronjob to delete files
+- [ ] Add security for private folder (auto / specific password)
+- [ ] Add a parameter for TTL
