@@ -48,7 +48,7 @@ def main():
         parser.error('Wrong number of arguments')
 
     if options.to_delete:
-        print 'Deleting: %s' % args[0]
+        print('Deleting: {}'.format(args[0]))
         try:
             password = getpass()
 
@@ -67,10 +67,10 @@ def main():
             sftp.close()
             ssh.close()
 
-            print 'Deleted'
+            print('Deleted')
 
         except Exception as error:
-            print error
+            print(error)
 
     else:
         if not os.path.exists(args[0]):
@@ -95,7 +95,7 @@ def main():
 
         filename = slugify(basename) + '.' + extension
         timestamp = time.time()
-        string_to_hash = '%d/%s' % (timestamp, filename)
+        string_to_hash = '{}/{}'.format(timestamp, filename).encode('utf-8')
         file_hash = hashlib.sha1(string_to_hash).hexdigest()
 
         #
@@ -103,7 +103,7 @@ def main():
         destination_path = destination + file_hash
         destination = destination_path + '/' + filename
 
-        print 'Uploading: %s' % args[0]
+        print('Uploading: {}'.format(args[0]))
         try:
             password = getpass()
 
@@ -120,10 +120,10 @@ def main():
             sftp.close()
             ssh.close()
 
-            print 'I share: %s' % url
+            print('I share: {}'.format(url))
 
         except Exception as error:
-            print error
+            print(error)
 
 
 if __name__ == '__main__':

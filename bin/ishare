@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-LIB_PATH=.
-VIRTUALENV_PATH=$HOME/.virtualenvs/ishare/bin
-
-$VIRTUALENV_PATH/python $LIB_PATH/ishare.py $@
