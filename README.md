@@ -4,6 +4,12 @@ A simple command line tool for sharing files
 
 ## Usage
 
+### To install
+
+```bash
+python setup.py install
+```
+
 ### To push a file
 
 ```
@@ -31,7 +37,7 @@ Deleted
 
 ## TODO
 
-- [ ] Convert into a Python executable module
+- [x] Convert into a Python executable module
 - [ ] Remove configuration from script to dotfiles in user $HOME
 - [ ] Support key authentication
 - [ ] Support HTTP POST for upload
@@ -41,3 +47,19 @@ Deleted
 - [ ] Create a simple cronjob to delete files
 - [ ] Add security for private folder (auto / specific password)
 - [ ] Add a parameter for TTL
+- [ ] Installation instruction
+- [ ] Python3 compatibility
+
+## Development
+
+### Build container
+
+```bash
+docker build -t ishare .
+```
+
+### Run container
+
+```bash
+docker run --rm --name ishare-test -i -t -v $PWD:/app ishare sh
+```
